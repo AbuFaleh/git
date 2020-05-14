@@ -199,6 +199,7 @@ static int graph_write(int argc, const char **argv)
 			N_("only expire files older than a given date-time")),
 		OPT_END(),
 	};
+	struct strbuf buf = STRBUF_INIT;
 
 	opts.progress = isatty(2);
 	split_opts.size_multiple = 2;
